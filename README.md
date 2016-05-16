@@ -1,5 +1,5 @@
 # language-nastran package
 
-Adds syntax highlighting to NASTRAN files in Atom.
+Adds syntax highlighting to MSC Nastran 2016 bulk data files in Atom.
 
-Originally [converted](https://atom.io/docs/latest/converting-a-text-mate-bundle) from [bguest](https://github.com/bguest)'s [NASTRAN Texmate bundle](https://github.com/bguest/NASTRAN-Textmate-Bundle).
+This package is an update from [marioarbras](https://github.com/marioarbras)'s original TextMate [port](https://github.com/marioarbras/language-nastran.git)
