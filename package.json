@@ -1,7 +1,7 @@
 {
   "name": "language-nastran",
   "version": "0.2.0",
-  "description": "Atom language support for NASTRAN",
+  "description": "Atom language support for MSC Nastran 2016",
   "keywords": [],
   "repository": "https://github.com/sharkweek/language-nastran",
   "license": "MIT",
