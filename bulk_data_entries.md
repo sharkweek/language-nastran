@@ -80,7 +80,6 @@ April 26 2016.
     SPCADD
     SPCAX
     SPCOFF
-    SPCOFF
 
 \* Geometry, axisymmetry (primary)
 \*\* Geometry, grid points (primary)
@@ -558,7 +557,7 @@ April 26 2016.
     RADLST
     RADMTX
     RADSET
-    SLOAD
+    SLOAD*
     SLOADN1
     TEMP
     TEMPB3
@@ -567,6 +566,8 @@ April 26 2016.
     TEMPN1
     VIEW
     VIEW3D
+
+\* Loads, static (primary)
 
 ### p-Element Loads
     GMBC
@@ -612,8 +613,8 @@ April 26 2016.
     SLOAD
     SPCD
     SPCR
-    TEMP
-    TEMPD
+    TEMP***
+    TEMPD***
     TEMPP1
     TEMPP3
     TEMPRB
@@ -621,6 +622,7 @@ April 26 2016.
 
 \* Case control (primary)
 \*\* Loads, dynamic (primary)
+\*\*\* Loads, heat transfer (primary)
 
 ## Materials
 ### Anisotropic
@@ -677,12 +679,15 @@ April 26 2016.
     TABLEM3
     TABLEM4
     TABLEST
-    TEMP
-    TEMPAX
-    TEMPD
-    TEMPP1
+    TEMP*
+    TEMPAX*
+    TEMPD*
+    TEMPP1**
     TEMPP2
-    TEMPRB
+    TEMPRB**
+
+\* Loads, heat transfer (primary)
+\*\* Loads, static (primary)
 
 ## Miscellaneous
 ### Brake Squeal (SOL 400)
