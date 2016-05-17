@@ -285,7 +285,7 @@ April 26 2016.
     SKPAMP
     SLOOPID
     SMALLQ
-    SNORM
+    SNORM**
     SNORMPRT
     SOFTEXIT
     SOLADJC
@@ -339,6 +339,7 @@ April 26 2016.
     ZROVEC
 
 \* Also used in File Management section (primary)
+\*\* Also in bulk data section (primary)
 
 ## Parameters for SOLs 115 through 700
     ACEXTMTD
@@ -418,7 +419,7 @@ April 26 2016.
     DBCCONV
     DBCDIAG
     DBCOVWRT
-    DBDICT
+    DBDICT*
     DBDRPRJ
     DBDRVER
     DBDN
@@ -976,7 +977,7 @@ April 26 2016.
     SKPAMP
     SLOOPID
     SMALLQ
-    SNORM
+    SNORM**
     SNORMPRT
     SOFTEXIT
     SOLADJC
@@ -1031,3 +1032,6 @@ April 26 2016.
     XYUNIT
     ZROCMAS
     ZROVEC
+
+\* Also used in File Management section (primary)
+\*\* Also in bulk data section (primary)
