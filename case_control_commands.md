@@ -43,9 +43,9 @@ Quick Reference Guide (QRG) Revision 0, April 26, 2016.
     BC
     DSYM
     MPC*
-    SPC
+    SPC*
     STATSUB
-    SUPORT1
+    SUPORT1*
 
 \* Also a load in bulk data section (primary)
 
