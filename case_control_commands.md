@@ -7,7 +7,6 @@ Quick Reference Guide (QRG) Revision 0, April 26, 2016.
 ### Output Request Delimiters
     ENDCARDS
     OUTPUT
-    SETS DEFINITION
 
 ### Subcase Delimiters
     REPCASE
@@ -24,25 +23,31 @@ Quick Reference Guide (QRG) Revision 0, April 26, 2016.
 
 ## Data Selection
 ### Static Load Selection
-    DEFORM
+    DEFORM*
     CLOAD
-    LOAD
+    LOAD*
     LOADNAME
 
+\* Also a load in bulk data section (primary)
+
 ### Dynamic Load Selection
-    DLOAD
+    DLOAD*
     LOADSET
     NONLINEAR
+
+\* Also a load in bulk data section (primary)
 
 ### Constant Selection
     AXISYMMETRIC
     AUTOSPC
     BC
     DSYM
-    MPC
+    MPC*
     SPC
     STATSUB
     SUPORT1
+
+\* Also a load in bulk data section (primary)
 
 ### Thermal Field Selection
     TEMPERATURE
@@ -58,13 +63,15 @@ Quick Reference Guide (QRG) Revision 0, April 26, 2016.
     IC
     METHOD
     MODESELECT
-    NSM
+    NSM*
     RANDOM
     RESVEC
     RGYRO
     SDAMPING
     SMETHOD
     TSTEP
+
+\* Also a load in bulk data section (primary)
 
 ### Direct Input Matrix Selections
     A2GG
@@ -75,9 +82,11 @@ Quick Reference Guide (QRG) Revision 0, April 26, 2016.
     K42GG
     M2GG
     M2PP
-    MFLUID
+    MFLUID*
     P2G
     TFL
+
+\* Also used bulk data section (primary)
 
 ### Nonlinear Analysis
     ENDSTEP
@@ -94,11 +103,13 @@ Quick Reference Guide (QRG) Revision 0, April 26, 2016.
     AESYMXY
     AESYMXZ
     AEUXREF
-    CSSCHD
+    CSSCHD*
     DIVERG
     FMETHOD
     GUST
     TRIM
+
+\* Aerodynamic element (primary)
 
 ### Design Sensitivity and Optimization (SOL 200)
     ANALYSIS
@@ -117,9 +128,10 @@ Quick Reference Guide (QRG) Revision 0, April 26, 2016.
     ADAPT
     DATAREC
     OUTRCV
-    SET
-    SETS DEFINITION
+    SET*
     VUGRID
+
+\* Set definition (primary)
 
 ### Adaptive Meshing
     HADAPT
@@ -191,7 +203,7 @@ Quick Reference Guide (QRG) Revision 0, April 26, 2016.
     EQUILIBRIUM
     FATIGUE
     FLUX
-    FORCE
+    FORCE*
     ELFORCE
     GPFORCE
     GPKE
@@ -217,6 +229,8 @@ Quick Reference Guide (QRG) Revision 0, April 26, 2016.
     STRFIELD
     THERMAL
     VELOCITY
+
+\* Load in bulk data section (primary)
 
 ### Solution Set Output Requests
     AEROF
@@ -255,7 +269,6 @@ Quick Reference Guide (QRG) Revision 0, April 26, 2016.
     BEGIN BULK
     END BULK
     INCLUDE
-    NSM
     PARAM
     POST
     RIGID

@@ -38,18 +38,23 @@ April 26 2016.
     MPCD
     MPCY
     MPCAX
-    POINTAX
-    RBAR
-    RBE1
-    RBE2
-    RBE3
-    RROD
-    RSPLINE
-    RTRPLT
+    POINTAX*
+    RBAR**
+    RBE1**
+    RBE2**
+    RBE3**
+    RROD**
+    RSPLINE**
+    RTRPLT**
+
+\* Geometry, axisymmetry (primary)
+\*\* Elements, rigid (primary)
 
 ### p-Element Geometry Constrains
-    GMBC
+    GMBC*
     GMSPC
+
+\* Loads, p-Element loads (primary)
 
 ### Partitioning
     ASET
@@ -60,20 +65,25 @@ April 26 2016.
     OMIT1
     OMITAX
     RELEASE
-    SEELT
+    SEELT*
     SESET
 
+\* Geometry, superelement analysis (primary)
+
 ### Single-Point Constraints
-    FLSYM
-    GRID
-    GRIDB
-    GRDSET
+    FLSYM*
+    GRID**
+    GRIDB**
+    GRDSET**
     SPC
     SPC1
     SPCADD
     SPCAX
     SPCOFF
     SPCOFF
+
+\* Geometry, axisymmetry (primary)
+\*\* Geometry, grid points (primary)
 
 ### User Sets
     DEFUSET
@@ -142,14 +152,14 @@ April 26 2016.
     CSEAM
     CSLOT3**
     CSLOT4**
-    CWELD
-    PFAST
+    CWELD*
+    PFAST*
     PSEAM
-    PWELD
+    PWELD*
     SWLDPRM
 
-\* Line elements (primary)
-\*\* Fluid elements (primary)
+\* Elements, line (primary)
+\*\* Elements, fluid (primary)
 
 ### Sidelines Contact (SOL 106, 129)
     BCONP
@@ -179,13 +189,14 @@ April 26 2016.
     CVISC
     DAMPING
     HYBDAMP
-    PBUSH1D
+    PBUSH1D*
     PDAMP
     PDAMP5
     PDAMPT
     PVISC
     ROTHYBD
-\* Scalar and bushing element (primary)
+
+\* Elements, scalar/bushing (primary)
 
 ### Dummy elements
     ADUM1
@@ -234,20 +245,21 @@ April 26 2016.
     CPENTA***
     CSLOT3
     CSLOT4
-    CTETRA
+    CTETRA***
     ELIST
-    MAT10
+    MAT10**
     PAABSF
     PACABS
     PACBAR
     PACINF
     PANEL
-    PSOLID
-    SET1
+    PSOLID***
+    SET1****
 
-\* Assymetric elements (primary)
-\*\* Fluid elements (primary)
-\*\*\* Solid elements (primary)
+\* Elements, axisymmetric (primary)
+\*\* Elements, fluid (primary)
+\*\*\* Elements, solid (primary)
+\*\*\*\* Elements, aerodynamic (primary)
 
 ### Equivalent Radiated Power
     ERPPNL
@@ -294,7 +306,7 @@ April 26 2016.
     PFAST
     PBMSECT
     PBRSECT
-    PBUSH1D
+    PBUSH1D**
     PBUSH2D
     PMREBAI
     PMREBAR
@@ -303,8 +315,8 @@ April 26 2016.
     PTUBE
     PWELD
 
-\* Coordinate System (primary)
-\*\* Scalar and bushing elements (primary)
+\* Geometry (primary)
+\*\* Elements, scalar/bushing (primary)
 
 ### Mass Elements
     CMASS1
@@ -437,13 +449,15 @@ April 26 2016.
     ACMODL
     FREEPT
     FSLIST
-    GRID
-    GRIDB
+    GRID*
+    GRIDB*
     GRIDF
     GRIDS
     PRESPT
     RINGFL
     SLBDY
+
+\* Geometry, grid points (primary)
 
 ### Grid Points
     AEGRID
@@ -459,24 +473,28 @@ April 26 2016.
     GMBNDS
     GMCORD
     GMCURV
-    GMINTC
-    GMINTS
+    GMINTC*
+    GMINTS*
     GMSURF
-    PINTC
-    PINTS
+    PINTC*
+    PINTS*
     POINT
+
+\* Elements (primary)
 
 ### Scalar Points
     EPOINT
-    SEQGP
+    SEQGP*
     SPOINT
+
+\* Geometry, grid points (primary)
 
 ### Superelement Analysis
     CSUPER
-    CSUPEXT
+    CSUPEXT*
     EXTRN
-    GRID
-    RELEASE
+    GRID**
+    RELEASE*
     SEBNDRY
     SEBULK
     SECONCT
@@ -489,8 +507,11 @@ April 26 2016.
     SELOC
     SEMPLN
     SEQSEP
-    SESET
+    SESET**
     SETREE
+
+\* Geometry, constraints (primary)
+\*\* Geometry, grid points (primary)
 
 ## Loads
 ### Dynamic Loads
@@ -501,13 +522,13 @@ April 26 2016.
     DPHASE
     LOADCYH
     LOADCYN
-    LSEQ
+    LSEQ*
     NOLIN1
     NOLIN2
     NOLIN3
     NOLIN4
     NLRGAP
-    RBE3U
+    RBE3U*
     RLOAD1
     RLOAD2
     TABLED1
@@ -517,6 +538,8 @@ April 26 2016.
     TABLED5
     TLOAD1
     TLOAD2
+
+\* Loads, static (primary)
 
 ### Heat Transfer Loads
     CONV
@@ -561,15 +584,14 @@ April 26 2016.
     FORCE1
     FORCE2
     FORCEAX
-    FORCEi
     GRAV
     GRIDA
     LOAD
     LOADCLID
     LOADCNAM
     LOADCSUB
-    LOADCYH
-    LOADCYN
+    LOADCYH**
+    LOADCYN**
     LOADCYT
     LOADOF
     LOADT
@@ -598,6 +620,7 @@ April 26 2016.
     TEMPAX
 
 \* Case control (primary)
+\*\* Loads, dynamic (primary)
 
 ## Materials
 ### Anisotropic
@@ -620,12 +643,13 @@ April 26 2016.
     CFLUID4
     CSLOT3
     CSLOT4
-    FSLIST
+    FSLIST*
     MAT10
     MFLUID
-    SLBDY
+    SLBDY**
 
 \* Geometry (primary)
+\* Geometry, fluid points (primary)
 
 ### Isotropic
     MAT1
@@ -668,12 +692,11 @@ April 26 2016.
     CONM1*
     DMI
     DMIG
-    DMIG
     UACCEL
     DMIAX
     TF
 
-\* Mass element (primary)
+\* Elements (primary)
 
 ### Direct Matrix Input for Elasticity
     DMIJ
